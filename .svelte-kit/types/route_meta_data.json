@@ -1,0 +1,9 @@
+{
+	"/": [],
+	"/Buses": [
+		"src/routes/Buses/+page.server.js"
+	],
+	"/STCard": [
+		"src/routes/STCard/+page.server.js"
+	]
+}
