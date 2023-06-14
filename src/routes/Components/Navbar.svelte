@@ -2,7 +2,10 @@
 	let list = [
 		{ href: '/', icon: '/over.png', title: 'Overview', css: ' bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium ' },
 		{ href: '/STCard', icon: '/student.png', title: 'Manage ST Card ', css: ' text-white rounded-md px-3 py-2 text-sm font-medium ' },
-		{ href: '/Buses', icon: '/student.png', title: 'Buses ', css: ' text-white rounded-md px-3 py-2 text-sm font-medium ' }
+		{ href: '/Buses', icon: '/student.png', title: 'Buses ', css: ' text-white rounded-md px-3 py-2 text-sm font-medium ' },
+	
+			{ href: '/SeniorCitizen', icon: '/student.png', title: 'Manage SeniorCitizen ', css: ' text-white rounded-md px-3 py-2 text-sm font-medium ' }
+
 	];
 
 	/**

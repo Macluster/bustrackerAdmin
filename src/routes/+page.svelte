@@ -3,6 +3,9 @@
 	import Card from './Components/Card.svelte';
 	import NavItem from './Components/NavItem.svelte';
 
+
+	export let data;
+
 	var i;
 </script>
 
@@ -14,10 +17,10 @@
 		
 		<div class="flex flex-row justify-around items-center h-[80%] w-[95%] absolute ">
 			
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
+			<Card value={data['stCardCount']} text={"St Card Applications"}></Card>
+			<Card value={data['seniorCitizenCount']} text={"SeniorCitizens Card Applications"}  ></Card>
+			<Card value={data['totalNumberOfBus']} text={"No Of Buses"}></Card>
+			<Card value={data['totalUsers']} text={"Total number of users"}></Card>
 			
 			
 		
