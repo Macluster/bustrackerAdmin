@@ -11,6 +11,7 @@
 	let searchName = '';
     let searchOwner="";
 	let dialogFlag = 0;
+	let standardFare=0;
 
 	async function onNameChange() {
 		data = await getDataByName(searchName);
@@ -55,6 +56,9 @@
             
 			on:input={onOwnerChange}
 		/>
+
+		<input  class="p-1" placeholder="Set Stadard fare" bind:value={standardFare}/>
+		<button on:click={()=>{}}>Submit</button>
 	</div>
 
 	<div class="h-[20px]" />

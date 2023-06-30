@@ -35,6 +35,12 @@ export async function getDataByName(name) {
 
 
 
+function setStandardBusData(fare){
+    await supabase.from("BusOwners").
+}
+
+
+
 
 
 export async function getDataByOwner(name) {
