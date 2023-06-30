@@ -18,8 +18,8 @@ export async function load() {
     .select('*', { count: 'exact' })
 
 
-    const totalNumberOfBus =  await supabase
-    .from('Buses')
+    const totalNumberOfBusOwners =  await supabase
+    .from('BusOwners')
  
     .select('*', { count: 'exact' })
 
@@ -34,7 +34,7 @@ export async function load() {
     return {
         stCardCount: StCount['count']?? [],
         seniorCitizenCount:seniorCitizenCount['count']??[],
-        totalNumberOfBus:totalNumberOfBus['count']??[],
+        totalNumberOfBusOwners:totalNumberOfBusOwners['count']??[],
         totalUsers:totalUsers['count']??[]
       };
   }

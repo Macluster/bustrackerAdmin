@@ -19,7 +19,7 @@
 			
 			<Card value={data['stCardCount']} text={"St Card Applications"}></Card>
 			<Card value={data['seniorCitizenCount']} text={"SeniorCitizens Card Applications"}  ></Card>
-			<Card value={data['totalNumberOfBus']} text={"No Of Buses"}></Card>
+			<Card value={data['totalNumberOfBusOwners']} text={"No Of Buses Owners"}></Card>
 			<Card value={data['totalUsers']} text={"Total number of users"}></Card>
 			
 			
