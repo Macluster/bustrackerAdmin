@@ -35,9 +35,7 @@ export async function getDataByName(name) {
 
 
 
-function setStandardBusData(fare){
 
-}
 
 
 

@@ -26,6 +26,15 @@ import StTableItemCard from '../Components/StTableItemCard.svelte';
 	{
 		addError(errorData,selectedID)
 	}
+	
+	let formImage="";
+	let formFlag=0;
+	// @ts-ignore
+	function openFormImageFun(url)
+	{
+			formImage=url;
+			formFlag == 0 ? (formFlag = 1) : (formFlag = 0);
+	}
 
 
 </script>
@@ -49,12 +58,13 @@ import StTableItemCard from '../Components/StTableItemCard.svelte';
 				<th scope="col" class="px-6 py-3">Course</th>
 				<th scope="col" class="px-6 py-3">Course Duration</th>
 				<th scope="col" class="px-6 py-3">Status</th>
-				<th scope="col" class="px-6 py-3">Photo</th>
+				<th scope="col" class="px-6 py-3">Form Image</th>
+				<th scope="col" class="px-6 py-3">Passport Photo</th>
 			</tr>
 		</thead>
 		<tbody>
 			{#each data['data'] as item}
-				<StTableItemCard contents={item} changeDialogFlag={changedailogFlag} />
+				<StTableItemCard contents={item} changeDialogFlag={changedailogFlag} openFormImage={openFormImageFun} />
 			{/each}
 		</tbody>
 	</table>
@@ -74,5 +84,15 @@ import StTableItemCard from '../Components/StTableItemCard.svelte';
 			<button class="bg-red-500" on:click={submitButtonClicked} >Submit</button>
 	</div>
 </div>
+{/if}
+{#if formFlag == 1}
+<div class="  bg-gray-700 h-[100%] w-[100%] flex justify-center items-center  fixed bg-opacity-50">
+
+	<div class="bg-[#F9F5F6] h-[400px] w-[600px] flex flex-col p-5  rounded-lg shadow-2xl ">
+		<div class="flex  justify-end"><h1 class="font-bold"  on:mousedown={()=>{formFlag=0}}>X</h1></div>
+		<img src={formImage} alt="" class="h-full w-full"/>
+	</div>
+</div>
+
 {/if}
 </div>

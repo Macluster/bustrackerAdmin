@@ -4,6 +4,7 @@
 	import BusesItemCard from '../Components/BusesItemCard.svelte';
 
 	import { getDataByName,getDataByOwner,sendNotification } from '../../Backend/BusTable';
+	import writeUserData from '../../Backend/FirebaseDatabase'
 	import StTableItemCard from '../Components/StTableItemCard.svelte';
 
 	export let data;
@@ -11,7 +12,7 @@
 	let searchName = '';
     let searchOwner="";
 	let dialogFlag = 0;
-	let standardFare=0;
+	let standardFare="";
 
 	async function onNameChange() {
 		data = await getDataByName(searchName);
@@ -56,9 +57,10 @@
             
 			on:input={onOwnerChange}
 		/>
-
+		<div class="w-[30px]" />
 		<input  class="p-1" placeholder="Set Stadard fare" bind:value={standardFare}/>
-		<button on:click={()=>{}}>Submit</button>
+		<div class="w-[10px]" />
+		<button class="bg-slate-600 p-1 rounded-lg text-white" on:click={()=>{writeUserData(standardFare)}}>Submit</button>
 	</div>
 
 	<div class="h-[20px]" />
